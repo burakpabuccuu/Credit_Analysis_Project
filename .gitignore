@@ -1,0 +1,45 @@
+# Virtual Environment
+venv/
+.venv/
+env/
+
+# Environment Variables
+.env
+.env.local
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Data Files (Genelde ham veriler veya çok büyük dosyalar GitHub'a yüklenmez)
+# Eğer küçük bir veri setiyse (örn. test_dataset_final.csv) burayı açabilirsiniz.
+# *.csv
+# *.xlsx
+# *.pkl (Eğer modeliniz 100MB'dan büyükse, aksi takdirde yükleyebilirsiniz. Mevcut model 900KB civarında, bu yüzden sorun yok)
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints
