@@ -126,8 +126,8 @@ Uygulama varsayılan olarak tarayıcınızda `http://localhost:8501` adresinde a
 Bu proje harika bir ekip çalışmasının ürünüdür:
 
 - **Burak Pabuccu** - *Veri Bilimcisi & Geliştirici* - [GitHub Profili](https://github.com/burakpabuccuu)
-- **Banu Serra Batar** - *Veri Bilimcisi & Geliştirici* - [GitHub Profili]() *(Linkleri güncelleyebilirsiniz)*
-- **Tunahan Sönmez** - *Veri Bilimcisi & Geliştirici* - [GitHub Profili](https://github.com/tunahansonmez) *(Linkleri güncelleyebilirsiniz)*
+- **Banu Serra Batar** - *Veri Bilimcisi & Geliştirici* - [GitHub Profili](https://github.com/serrabatar)
+- **Tunahan Sönmez** - *Veri Bilimcisi & Geliştirici* - [GitHub Profili](https://github.com/tunahansonmez)
 
 Miuul Bootcamp sürecinde elde ettiğimiz bilgi birikimi ve takım içi uyum sayesinde bu başarılı projeyi ortaya koyduk! 🎉
 
