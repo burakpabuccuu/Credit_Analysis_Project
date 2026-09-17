@@ -1,3 +1,5 @@
+
+
 # Kredi Risk Analizi ve Tahminleme Projesi 📊
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue?logo=python)
@@ -124,8 +126,8 @@ Uygulama varsayılan olarak tarayıcınızda `http://localhost:8501` adresinde a
 Bu proje harika bir ekip çalışmasının ürünüdür:
 
 - **Burak Pabuccu** - *Veri Bilimcisi & Geliştirici* - [GitHub Profili](https://github.com/burakpabuccuu)
-- **Serra [Soyadı]** - *Veri Bilimcisi & Geliştirici* - [GitHub Profili](https://github.com/serra_github) *(Linkleri güncelleyebilirsiniz)*
-- **Tunahan [Soyadı]** - *Veri Bilimcisi & Geliştirici* - [GitHub Profili](https://github.com/tunahan_github) *(Linkleri güncelleyebilirsiniz)*
+- **Banu Serra Batar** - *Veri Bilimcisi & Geliştirici* - [GitHub Profili]() *(Linkleri güncelleyebilirsiniz)*
+- **Tunahan Sönmez** - *Veri Bilimcisi & Geliştirici* - [GitHub Profili](https://github.com/tunahansonmez) *(Linkleri güncelleyebilirsiniz)*
 
 Miuul Bootcamp sürecinde elde ettiğimiz bilgi birikimi ve takım içi uyum sayesinde bu başarılı projeyi ortaya koyduk! 🎉
 
