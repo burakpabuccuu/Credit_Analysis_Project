@@ -27,7 +27,7 @@ Bu proje, **Miuul Veri Bilimi Bootcamp** bitirme projesi olarak geliştirilmişt
 Bu projede kullanılan veri seti, açık kaynaklı platformlardan (Kaggle) temin edilmiştir. 
 Kredi başvurusu yapan müşterilerin demografik ve finansal bilgilerini (gelir durumu, yaş, kredi geçmişi vb.) içermektedir.
 
-- **Kaynak:** [Kaggle Veri Seti Linki Buraya Eklenecek](https://www.kaggle.com/)
+- **Kaynak:** [Kaggle - Default of Credit Card Clients Dataset](https://www.kaggle.com/datasets/uciml/default-of-credit-card-clients-dataset)
 - *Not: Proje boyutunu (repository size) optimum tutmak ve veri gizliliği standartlarına uymak adına ham veri seti (.csv dosyaları) bu depoya dahil edilmemiştir. Projeyi sıfırdan çalıştırmak isterseniz veriyi yukarıdaki bağlantıdan indirip proje dizinine ekleyebilirsiniz.*
 
 ---
