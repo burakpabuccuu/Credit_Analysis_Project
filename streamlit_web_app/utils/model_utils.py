@@ -3,14 +3,46 @@ Model ve SHAP yardımcı fonksiyonları.
 LightGBM Pipeline modelini yükler, tahmin yapar ve SHAP değerlerini hesaplar.
 """
 
+from pathlib import Path
+import os
 import joblib
 import numpy as np
 import pandas as pd
 import shap
 import streamlit as st
 import warnings
+from dotenv import load_dotenv
 
 warnings.filterwarnings("ignore")
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+load_dotenv()
+load_dotenv(BASE_DIR / ".env")
+
+
+def _resolve_path(file_path: str | Path) -> Path:
+    """
+    Dosya yolunu hem yerel çalıştırmada hem de Streamlit Cloud ortamında
+    (çalışma dizini repo kökü veya streamlit_web_app olduğunda) bulur.
+    """
+    p = Path(file_path)
+    if p.is_file():
+        return p
+
+    candidate_app = BASE_DIR / p.name
+    if candidate_app.is_file():
+        return candidate_app
+
+    candidate_rel = BASE_DIR / file_path
+    if candidate_rel.is_file():
+        return candidate_rel
+
+    candidate_root = BASE_DIR.parent / file_path
+    if candidate_root.is_file():
+        return candidate_root
+
+    return p
+
 
 # ─────────────────────────────────────────────
 # Model Yükleme (Cached)
@@ -19,7 +51,8 @@ warnings.filterwarnings("ignore")
 @st.cache_resource(show_spinner="🔄 Model yükleniyor...")
 def load_model(model_path: str = "lgbm_credit_risk_model.pkl"):
     """Modeli diskten yükler ve bellekte tutar."""
-    model = joblib.load(model_path)
+    resolved_path = _resolve_path(model_path)
+    model = joblib.load(resolved_path)
     return model
 
 
@@ -41,10 +74,6 @@ def predict_customer(model, customer_data: pd.DataFrame) -> dict:
             "risk_score": float (0-100)
         }
     """
-    import os
-    from dotenv import load_dotenv
-    load_dotenv()
-
     feature_cols = list(model.feature_names_in_)
     X = customer_data[feature_cols]
 

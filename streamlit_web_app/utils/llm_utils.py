@@ -3,13 +3,16 @@ LLM entegrasyon modülü.
 Gemini Flash (birincil) + Groq Llama 3 (yedek) ile kredi risk açıklaması üretir.
 """
 
+from pathlib import Path
 import os
 import streamlit as st
 from dotenv import load_dotenv
 
 from utils.data_utils import get_friendly_feature_name
 
+BASE_DIR = Path(__file__).resolve().parent.parent
 load_dotenv()
+load_dotenv(BASE_DIR / ".env")
 
 
 # ─────────────────────────────────────────────

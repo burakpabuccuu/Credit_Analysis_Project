@@ -2,8 +2,35 @@
 Veri yükleme ve müşteri sorgulama yardımcı fonksiyonları.
 """
 
+from pathlib import Path
 import pandas as pd
 import streamlit as st
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+
+def _resolve_path(file_path: str | Path) -> Path:
+    """
+    Dosya yolunu hem yerel çalıştırmada hem de Streamlit Cloud ortamında
+    (çalışma dizini repo kökü veya streamlit_web_app olduğunda) bulur.
+    """
+    p = Path(file_path)
+    if p.is_file():
+        return p
+
+    candidate_app = BASE_DIR / p.name
+    if candidate_app.is_file():
+        return candidate_app
+
+    candidate_rel = BASE_DIR / file_path
+    if candidate_rel.is_file():
+        return candidate_rel
+
+    candidate_root = BASE_DIR.parent / file_path
+    if candidate_root.is_file():
+        return candidate_root
+
+    return p
 
 
 # ─────────────────────────────────────────────
@@ -13,7 +40,8 @@ import streamlit as st
 @st.cache_data(show_spinner="📊 Veri seti yükleniyor...")
 def load_dataset(csv_path: str = "test_dataset_final.csv") -> pd.DataFrame:
     """Test veri setini diskten yükler ve bellekte tutar."""
-    df = pd.read_csv(csv_path)
+    resolved_path = _resolve_path(csv_path)
+    df = pd.read_csv(resolved_path)
     return df
 
 
