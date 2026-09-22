@@ -54,8 +54,17 @@ st.markdown("""
     }
 
     /* ── Global ── */
-    .stApp {
+    .stApp,
+    [data-testid="stAppViewContainer"],
+    [data-testid="stHeader"] {
+        background-color: #0A1628 !important;
+        color: #E8ECF1 !important;
         font-family: 'Inter', sans-serif;
+    }
+
+    [data-testid="stSidebar"],
+    [data-testid="stSidebarContent"] {
+        background: linear-gradient(180deg, #0A1628 0%, #0D1B2A 100%) !important;
     }
 
     /* ── Main Header ── */
@@ -247,9 +256,16 @@ st.markdown("""
         border-radius: 12px;
         padding: 1rem;
     }
+    div[data-testid="stMetricLabel"] p {
+        color: var(--bank-muted) !important;
+    }
     div[data-testid="stMetricValue"] {
         font-family: 'Inter', sans-serif;
         font-weight: 700;
+        color: var(--bank-text) !important;
+    }
+    .stMarkdown p {
+        color: var(--bank-text);
     }
 </style>
 """, unsafe_allow_html=True)
