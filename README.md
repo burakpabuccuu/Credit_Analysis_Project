@@ -12,6 +12,16 @@ Bu proje, **Miuul Veri Bilimi Bootcamp** bitirme projesi olarak geliştirilmişt
 
 ---
 
+## 🖥️ Canlı Karar Destek Arayüzü (PoC)
+
+Modelimizin çıktısını operasyonel bir ürüne dönüştürmek amacıyla geliştirdiğimiz Streamlit uygulamasının demosu:
+
+![Streamlit Arayüz Demosu](assets/streamlit_demo.gif)
+
+> 💡 **Yapay Zeka (LLM) Entegrasyonu:** Arayüz, modelin SHAP çıktılarını okuyarak gişe memuru için anlık ve doğal dilde (Türkçe) finansal risk içgörüleri üretmektedir.
+
+---
+
 ## 🌟 Projenin Temel Özellikleri
 
 - **Kapsamlı Keşifçi Veri Analizi (EDA):** Veri setindeki eksik değerlerin, aykırı değerlerin tespiti ve değişkenler arası ilişkilerin istatistiksel ve görsel analizi.
@@ -36,6 +46,8 @@ Kredi başvurusu yapan müşterilerin demografik ve finansal bilgilerini (gelir 
 
 ```bash
 Credit_Analysis_Project/
+├── assets/                          # Proje görselleri ve demo GIF animasyonları
+│   └── streamlit_demo.gif
 ├── 01_eda_and_preprocessing.py      # Keşifçi Veri Analizi ve Veri Ön İşleme adımları
 ├── 02_feature_engineering.py        # Özellik Mühendisliği (Yeni değişkenlerin üretilmesi)
 ├── 03_modeling_evaluation.py        # Makine Öğrenmesi modellerinin kurulması ve değerlendirilmesi
